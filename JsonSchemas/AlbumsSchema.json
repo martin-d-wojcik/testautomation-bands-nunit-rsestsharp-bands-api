@@ -1,0 +1,40 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/AlbumsSchemaElement"
+  },
+  "definitions": {
+    "AlbumsSchemaElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "record_company": {
+          "$ref": "#/definitions/RecordCompany"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "record_company"
+      ],
+      "title": "AlbumsSchemaElement"
+    },
+    "RecordCompany": {
+      "type": "string",
+      "enum": [
+        "six shooter records",
+        "another one",
+        "tosser records",
+        "no name records"
+      ],
+      "title": "RecordCompany"
+    }
+  }
+}

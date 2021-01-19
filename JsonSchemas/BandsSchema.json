@@ -1,0 +1,30 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/BandElement"
+  },
+  "definitions": {
+    "BandElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "active": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "active",
+        "id",
+        "name"
+      ],
+      "title": "BandElement"
+    }
+  }
+}
